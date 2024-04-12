@@ -19,18 +19,18 @@
 // module.exports = MulterMiddleware;
 
 //3333
-const multer = require("multer");
+const multer = require("multer")
 
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, '/home/aman/Desktop/profileImages');
+        cb(null, '/home/aman/Desktop/profileImages')
     },
     filename: (req, file, cb) => {
-        cb(null, file.originalname + Date.now());
+        cb(null, file.originalname + Date.now())
     }
-});
+})
 
-const upload = multer({ storage: storage }).single('profileImage');
+const upload = multer({ storage: storage }).single('profileImage')
 
 module.exports = upload
 
